@@ -11,5 +11,5 @@ subject to balance {v in (V diff {s, t})}:
   sum {(u,v) in E} X[u,v] = sum {(v,w) in E} X[v,w];
 
 solve;
-printf {(u,v) in E : X[u,v] > 0}: "%s %s %f", u,v,X[u,v];
+printf {(u,v) in E : X[u,v] > 0}: "%s %s %f\n", u,v,X[u,v];
 end;
